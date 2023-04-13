@@ -26,7 +26,7 @@ header{
     flex-grow: 1;
     width: 100%;
     min-height: 70vh;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /*как тут можно сделать, чтобы main был примерно 70% ширины, но все равно перенеосился aside на меньших экранах*/
 }
 
 main{
@@ -62,9 +62,6 @@ main{
 
 .box-aside p{
     padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
 } 
 
 footer{
