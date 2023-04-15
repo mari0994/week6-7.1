@@ -7,26 +7,23 @@
 }
 
 body{
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    height: 100%;
+    display: grid;
+    grid-template: 100px 50% minmax(250px, 600px) / 1fr;
 }
 
 header{
     background-color: grey;
-    width: 100%;
     display:flex;
-    height: 100px;
     justify-content: center;
     align-items: center;
 }
 
 .wrapper{
     display: grid;
-    flex-grow: 1;
-    width: 100%;
-    min-height: 70vh;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /*как тут можно сделать, чтобы main был примерно 70% ширины, но все равно перенеосился aside на меньших экранах*/
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 main{
@@ -65,13 +62,10 @@ main{
 } 
 
 footer{
-    width: 100%;
     background-color: grey;
-    min-height: 250px;
-    max-height: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr) );
-    row-gap: 30px;
+    row-gap: 5px;
     justify-items: center;
     align-items: center;
 }
