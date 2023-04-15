@@ -7,8 +7,6 @@
 }
 
 body{
-    flex-wrap: wrap;
-    flex-direction: column;
     height: 100%;
     display: grid;
     grid-template: 100px 50% minmax(250px, 600px) / 1fr;
@@ -74,3 +72,15 @@ footer{
     padding: 30px;
     background-color: rgb(221, 221, 221);
 }
+
+@media screen and (min-width: 768px) {
+    /*html {
+        font-size: 2.5vw;
+    }*/
+}
+
+@media screen and (min-width: 1024px){}
+
+@media screen and (min-width: 1366px){}
+
+@media screen and (min-width: 1600px){}
