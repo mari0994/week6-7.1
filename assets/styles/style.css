@@ -7,11 +7,9 @@
 }
 
 body{
-    flex-wrap: wrap;
-    flex-direction: column;
     height: 100%;
     display: grid;
-    grid-template: 100px 50% minmax(250px, 600px) / 1fr;
+    grid-template: 100px 1fr 600px/ 1fr;
 }
 
 header{
@@ -23,18 +21,12 @@ header{
 
 .wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: 1fr 1fr;
 }
 
 main{
     background-color: beige;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-.box1, .box4{
-    grid-column: 1/ -1;
 }
 
 .box1{
@@ -64,8 +56,6 @@ main{
 footer{
     background-color: grey;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr) );
-    row-gap: 5px;
     justify-items: center;
     align-items: center;
 }
@@ -73,4 +63,66 @@ footer{
 .footer-box{
     padding: 30px;
     background-color: rgb(221, 221, 221);
+}
+
+@media screen and (min-width: 768px){
+    body{
+        display: grid;
+        grid-template: 100px 1fr 300px/ 1fr;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .box1, .box4{
+        grid-column: 1/ -1;
+    }
+    
+    .box1{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    
+    .box2, .box3, .box4{
+        background-color: burlywood;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    footer{
+        display: grid;
+        grid-template: 1fr 1fr/ 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 1024px){
+    body{
+        height: 100%;
+        display: grid;
+        grid-template: 100px 55vh 300px/ 1fr;
+    }
+    .wrapper{
+        display: grid;
+        grid-template: 1fr/ 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1366px){
+    body{
+        height: 100%;
+        display: grid;
+        grid-template: 100px 65vh 300px/ 1fr;
+    }
+    footer{
+        display: grid;
+        grid-template: 1fr/ repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
 }
